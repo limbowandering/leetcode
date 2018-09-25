@@ -12,5 +12,20 @@ function Queue(){
   this.isEmpty = function(){
     return items.length === 0;
   };
-  
+  this.size = function(){
+    return items.length;
+  }
+  this.print = function(){
+    console.log(items.toString);
+  }
+}
+
+function PriorityQueue(){
+  let items = [];
+  function QueueElement(element, priority){
+    this.element = element;
+    this.priority = priority;
+  }
+
+
 }
