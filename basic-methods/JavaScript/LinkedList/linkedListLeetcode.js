@@ -228,9 +228,9 @@ module.exports = {
     LinkedList: LinkedList
 }
 
-//usage
-const linkedList = require('../basic-methods/JavaScript/LinkedList/linkedListLeetcode');
+// //usage
+// const linkedList = require('../basic-methods/JavaScript/LinkedList/linkedListLeetcode');
 
-let a = new linkedList.LinkedList();
-a.append(1);
-a.print();
+// let a = new linkedList.LinkedList();
+// a.append(1);
+// a.print();
