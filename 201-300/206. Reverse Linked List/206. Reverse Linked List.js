@@ -1,14 +1,15 @@
 const linkedList = require('../basic-methods/JavaScript/LinkedList/linkedListLeetcode');
 
-//写错了 明天在更新
 const reverseList = function(head){
-    let pre = head;
-    let cur = head.next;
-    let tmp;
-    while(cur!==null){
+    if(head == null){
+        return head;
+    }
+    let cur = head;
+    let pre = null, tmp = null;
+    while(cur != null){
         tmp = cur.next;
         cur.next = pre;
-        pre = pre.next;
+        pre = cur;
         cur = tmp;
     }
     return pre;
@@ -19,5 +20,5 @@ for(let i = 0 ; i < 3; i++){
     a.append(i);
 }
 a.print();
-reverseList(a.getHead());
-a.print();
+let b = reverseList(a.getHead());
+console.log(a.print2(b));

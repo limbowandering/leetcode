@@ -221,6 +221,14 @@ function LinkedList(){
     };
     this.print = function(){
         console.log(this.toString());
+    };
+    this.print2 = function(node){
+        let string = '';
+        while(node!==null){
+            string = string+node.val+' ';
+            node = node.next;
+        }
+        return string;
     }
 }
 
