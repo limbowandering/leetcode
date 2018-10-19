@@ -1,3 +1,4 @@
+'use strict'
 //额 构造一个类 给LeetCode 刷题时候测试用
 function LinkedList(){
     let Node = function(val){
