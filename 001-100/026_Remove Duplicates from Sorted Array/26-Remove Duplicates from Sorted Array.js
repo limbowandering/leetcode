@@ -12,9 +12,7 @@ const removeDuplicates = function(nums){
       nums[k] = t;
       i++;
       res++;
-      
     }
   }
-  // console.log(nums);
   return res;
 }
