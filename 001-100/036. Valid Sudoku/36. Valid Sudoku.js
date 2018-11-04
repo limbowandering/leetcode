@@ -3,7 +3,7 @@
  * @param {character[][]} board
  * @return {boolean}
  */
-const isValidSudoku = function(board){
+const isValidSudoku2 = function(board){
   function lineTest(arr){
     for(let i = 0; i < 9; i++){
       for(let j = 0; j < 9; j++){
@@ -83,6 +83,27 @@ let arr2 = [
   [".",".",".","4","1","9",".",".","5"],
   [".",".",".",".","8",".",".","7","9"]
 ];
+
+const isValidSudoku = function(board){
+  let existed = new Set();
+  for(let i = 0; i < 9; i++){
+    for(let j = 0; j < 9; j++){
+      let number = board[i][j];
+      if(board[i][j] !== '.'){
+        if(existed.has(number + " in row " + i )||
+          existed.has(number + ' in column ' + j) ||
+          existed.has(number + 'in block ' + parseInt(i/3) + '-' + parseInt(j/3))){
+            return false;
+          }else{
+            existed.add(number + " in row " + i );
+            existed.add(number + ' in column ' + j);
+            existed.add(number + 'in block ' + parseInt(i/3) + '-' + parseInt(j/3));
+          }
+      }
+    }
+  }
+  return true;
+};
 
 console.log(isValidSudoku(arr2));
 
