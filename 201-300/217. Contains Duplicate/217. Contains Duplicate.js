@@ -3,11 +3,7 @@ const containsDuplicate = function(nums){
   nums.forEach(e => {
     set.add(e);
   })
-  if(set.size !== nums.length){
-    return true;
-  }else{
-    return false;
-  }
+  return set.size !== nums.length;
 }
 var containsDuplicate2 = function(nums) {
   return (new Set(nums).size !== nums.length);    
