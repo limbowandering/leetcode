@@ -1,3 +1,0 @@
-const repeatedSubstringPattern = function(s){
-  
-};
